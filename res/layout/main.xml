@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="340px">
+        
+            
+        <TextView android:id="@+id/music_info"
+            android:layout_width="240px"
+            android:layout_height="wrap_content"
+            android:singleLine ="true"
+            android:scrollHorizontally="true"/>
+            
+        <TextView android:id="@+id/music_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/music_info"
+            android:singleLine ="true"/>
+            
+        
+        <ListView android:id="@+id/android:list"
+            android:layout_width="290px"
+            android:layout_height="350px"
+            android:layout_below="@id/music_info"
+            android:layout_alignParentLeft="true"
+            />
+         <TextView android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dip"
+            android:text="REFR "/>
+            
+        <TextView android:id="@+id/last_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/refresh"
+            android:layout_marginTop="30dip"
+            android:text="LAST "/>
+            
+        <TextView android:id="@+id/cur_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/last_folder"
+            android:layout_marginTop="30dip"
+            android:text="CUR "/>
+            
+        <TextView android:id="@+id/all_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+             android:layout_below="@id/cur_list"
+            android:layout_marginTop="30dip"
+            android:text="ALL "/>
+            
+        <TextView android:id="@+id/p_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/all_list"
+            android:layout_marginTop="30dip"
+            android:text="MOD"/>
+            
+        <TextView android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/p_mode"
+            android:layout_marginTop="30dip"
+            android:text="EXIT"/>    
+    </RelativeLayout>
+    
+    <SeekBar android:id="@+id/pro_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+   
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        <Button android:id="@+id/pre"
+            android:layout_width="60px"
+            android:layout_height="fill_parent"
+            android:text="@string/pre"/>
+            
+        <Button android:id="@+id/play"
+            android:layout_width="60px"
+            android:layout_height="fill_parent"
+            android:text="@string/play"/>
+            
+        <Button android:id="@+id/pause"
+            android:layout_width="60px"
+            android:layout_height="fill_parent"
+            android:text="@string/pause"/>
+            
+        <Button android:id="@+id/stop"
+            android:layout_width="60px"
+            android:layout_height="fill_parent"
+            android:text="@string/stop"/>
+            
+        <Button android:id="@+id/nex"
+            android:layout_width="60px"
+            android:layout_height="fill_parent"
+            android:text="@string/nex"/>
+    
+    </LinearLayout>
+    
+    
+</LinearLayout>

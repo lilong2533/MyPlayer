@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.lilong"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:mimeType="vnd.android.cursor.dir/vnd.com.lilong.album"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.lilong.album"/>
+            </intent-filter>
+             <intent-filter>
+                <data android:mimeType="vnd.android.cursor.dir/vnd.com.lilong.music"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.lilong.music"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".NewAlbum"/>
+        <activity android:name=".MangeAlbumes"/>
+        
+        <provider android:name=".MusicProvider"
+            android:authorities="com.lilong"/>
+            
+        <service android:name=".Player"/>
+        
+        <receiver android:name=".MyBroadcast"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.lilong.pre" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.lilong.next" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.lilong.music" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.lilong.pause" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.lilong.refresh_widget" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".MyWidget">
+            <meta-data android:name="android.appwidget.provider"
+               android:resource="@xml/my_widget"></meta-data>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+</manifest> 

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+        
+    <EditText android:id="@+id/edit_album_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="10dip"
+         android:singleLine="true"
+        />
+    <ListView android:id="@+id/edit_all_music"
+        android:layout_width="260px"
+        android:layout_height="160px"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="6dip"
+        android:layout_below="@id/edit_album_name"/>
+        
+    <TextView android:id="@+id/local_folder_last_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_below="@id/edit_album_name"
+        android:layout_toRightOf="@id/edit_all_music"
+        android:singleLine="true"
+        android:text="LAST"/>
+        
+    <ListView android:id="@+id/edit_list"
+        android:layout_width="260px"
+        android:layout_height="160px"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="6dip"
+        android:layout_below="@id/edit_all_music"/>
+        
+    <TextView android:id="@+id/edit_last_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_below="@id/edit_all_music"
+        android:layout_alignTop="@id/edit_list"
+        android:layout_toRightOf="@id/edit_list"
+        android:singleLine="true"
+        android:text="LASE"/>
+        
+   <TextView android:id="@+id/edit_save_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_below="@id/edit_last_list"
+        android:layout_toRightOf="@id/edit_list"
+        android:singleLine="true"
+        android:text="SAVE"/>
+        
+   <TextView android:id="@+id/edit_delete_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_below="@id/edit_save_list"
+        android:layout_toRightOf="@id/edit_list"
+        android:singleLine="true"
+        android:text="DELET"/>
+        
+</RelativeLayout>
